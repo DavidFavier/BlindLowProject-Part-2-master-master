@@ -37,11 +37,8 @@ namespace BlindLowVisionProject.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("PhotoPat")
+                    b.Property<string>("PhotoPath")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SomeProperty")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -53,16 +50,14 @@ namespace BlindLowVisionProject.Migrations
                             Id = 1,
                             Department = 2,
                             Email = "nikhil@gmail.com",
-                            Name = "Nikhil",
-                            SomeProperty = 0
+                            Name = "Nikhil"
                         },
                         new
                         {
                             Id = 2,
                             Department = 1,
                             Email = "DrRohanP@gmail.com",
-                            Name = "DrRohanPatel",
-                            SomeProperty = 0
+                            Name = "DrRohanPatel"
                         });
                 });
 #pragma warning restore 612, 618

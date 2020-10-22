@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlindLowVisionProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201022010005_AddPhotoPathColumn")]
+    [Migration("20201022065106_AddPhotoPathColumn")]
     partial class AddPhotoPathColumn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace BlindLowVisionProject.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("PhotoPat")
+                    b.Property<string>("PhotoPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

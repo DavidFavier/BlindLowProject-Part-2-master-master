@@ -2,21 +2,20 @@
 
 namespace BlindLowVisionProject.Migrations
 {
-    public partial class AddSomeProperty : Migration
+    public partial class AddPhotoPathColumn : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "SomeProperty",
+            migrationBuilder.AddColumn<string>(
+                name: "PhotoPath",
                 table: "Customers",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "SomeProperty",
+                name: "PhotoPath",
                 table: "Customers");
         }
     }
